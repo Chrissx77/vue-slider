@@ -73,19 +73,23 @@ createApp({
     },
 
     methods : {
-        nextImg : function(){
-            this.activeImage++;
-            if(this.activeImag > this.slides.length - 1){
-                this.activeImage = 0;
-            }
-        },
 
         prevImg : function(){
             this.activeImage--;
             if(this.activeImage < 0){
                 this.activeImage = this.slides.length - 1;
             }
-        }
+        },
+
+        nextImg : function(){
+            this.activeImage++;
+            console.log("clickNext");
+            if(this.activeImage > this.slides.length - 1){
+                this.activeImage = 0;
+            }
+        },
+
+       
 
 
     }
